@@ -30,6 +30,16 @@ async function viewMyTickets() {
 function displayAllMyTix(allMyTickets) {
   console.log(allMyTickets);
 
+  let request = {
+    // id: 4,
+    // amount,
+    // Description,
+    // timeSubmitted,
+    // timeResolved,
+    // type,
+    // ticket_status,
+  };
+
   for (let ticket of allMyTickets) {
     //ticket is one object from 'allMyTickets
     let row = document.createElement('tr');
@@ -37,36 +47,66 @@ function displayAllMyTix(allMyTickets) {
     for (let data in ticket) {
       //data are the 4 properties of the object --> request, type, status, user
       let ticketData = ticket[data];
-      if (
-        data != 'user' &&
-        ticketData != 'resolver_ID' &&
-        ticketData != 'author_ID' &&
-        ticketData != 'reciept' &&
-        ticketData != 'status_ID' &&
-        ticketData != 'type_ID'
-      ) {
-        let tableData = document.createElement('td');
-        // if (data == 'request') {
-        //   for (i = 0; i < ticketData.length; i++)
-        //     tableData.innerText = ticketData[i];
-        //   // tableData.innerText = ;
-        // }
+      console.log(ticket);
+      console.log(request);
+      request.id = ticketData.reimbursement_ID;
+      console.log(request.id);
+      // if (
+      //   data != 'user'
+      //   //&&
+      //   // ticketData != 'resolver_ID' &&
+      //   // ticketData != 'author_ID' &&
+      //   // ticketData != 'reciept' &&
+      //   // ticketData != 'status_ID' &&
+      //   // ticketData != 'type_ID'
+      // ) {
+      //   let idData = document.createElement('td');
+      //   let amountData = document.createElement('td');
+      //   let descrData = document.createElement('td');
+      //   let timeSubData = document.createElement('td');
+      //   let timeResData = document.createElement('td');
+      //   let typeData = document.createElement('td');
+      //   let statusData = document.createElement('td');
+      //   //if (data != undefined) {
 
-        // console.log(ticket);
-        // console.log(data);
+      //   idData.innerText = ticketData.reimbursement_ID;
+      //   amountData.innerText = ticketData.reimbursement_Amount;
+      //   descrData.innerText = ticketData.description;
+      //   timeSubData.innerText = ticketData.time_Submitted;
+      //   timeResData.innerText = ticketData.time_Resolved;
+      // typeData.innerText = data;
+      // statusData.innerText = data;
 
-        console.log(ticketData.reimbursement_ID);
-        console.log(ticketData.reimbursement_Amount);
-        console.log(ticketData.description);
-        console.log(ticketData.time_Submitted);
-        console.log(ticketData.time_Resolved);
-        console.log(data.type);
-        console.log(data.status);
+      // if (data == 'request') {
+      //   for (i = 0; i < ticketData.length; i++)
+      //     tableData.innerText = ticketData[i];
+      //   // tableData.innerText = ;
+      // }
 
-        row.appendChild(tableData);
-      }
+      // console.log(ticket);
+      // console.log(data);
+
+      // console.log(ticketData.reimbursement_ID);
+      // console.log(ticketData.reimbursement_Amount);
+      // console.log(ticketData.description);
+      // console.log(ticketData.time_Submitted);
+      // console.log(ticketData.time_Resolved);
+      //console.log(data);
+      console.log(ticketData);
+      console.log(data);
+
+      // row.appendChild(idData);
+      // row.appendChild(amountData);
+      // row.appendChild(descrData);
+      // row.appendChild(timeSubData);
+      // row.appendChild(timeSubData);
+      // row.appendChild(timeResData);
+      // row.appendChild(typeData);
+      // row.appendChild(statusData);
+      //}
+      //}
     }
-    requestTbl.appendChild(row);
+    //requestTbl.appendChild(row);
   }
 }
 
