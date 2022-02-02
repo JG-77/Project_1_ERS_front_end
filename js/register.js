@@ -25,7 +25,7 @@ async function registerUser() {
     user_Email: document.getElementById('inputEmail').value.trim(),
     user_Role_ID: selectValue, //assign role ID of 1 or 2
   };
-
+  console.log(newUser);
   let response = await fetch(url + 'register', {
     method: 'POST',
     body: JSON.stringify(newUser),
@@ -43,7 +43,8 @@ async function registerUser() {
     } else {
       console.error(response.status);
     }
-    document.location.replace(url + '');
+    document.location.replace(url + 'html/login.html');
+    console.log('ok');
   } else {
     console.log('Error Status:' + response.status + ' Login failed!');
   }

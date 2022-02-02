@@ -20,9 +20,26 @@
     <!-- <span class="fs-4 mx-5" id="welcomeText" onload="displayName()">Welcome, </span> -->
     <!-- Buttons -->
     <div class="row justify-content-center pt-5 mw-100">
-        <button type="button" id="viewTicketBtn" class="btn btn-primary btn-lg w-50 p-3 mb-5 mx-5  text-light"><span class="fs-1">View Tickets</span></button>
-
-        <button type="button" id="newTicketBtn" class="btn btn-primary btn-lg w-50 p-3 mb-5 mx-5  text-light"><span class="fs-1">New Ticket</span></button>
+        <button type="button" id="newTicketBtn" class="btn btn-primary btn-lg w-50 p-3 mb-5 mx-5  text-light"><span class="fs-1">New Request</span></button>
+        <button type="button" id="viewTicketBtn" class="btn btn-primary btn-lg w-50 p-3 mb-5 mx-5  text-light"><span class="fs-1">View Past Reimbursments</span></button>
+    </div>
+    <!-- table for reimbursement display -->
+    <div class="d-flex justify-content-center" class="hiddenDiv">
+        <table class="table table-success table-striped w-100 mx-5">
+            <thead>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Time Submitted</th>
+                <th>Time Resolved</th>
+                <th>Type</th>
+                <th>Status</th>
+    
+            </thead>
+            <tbody id="tixTable">
+    
+            </tbody>
+        </table>
     </div>
     <!-- footer -->
     <footer class="bg-success mt-auto p-3 text-center">
